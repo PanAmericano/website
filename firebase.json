@@ -1,0 +1,8 @@
+{
+  "database": {
+    "rules": "read"
+  },
+  "hosting": {
+    "public": "Y"
+  }
+}
