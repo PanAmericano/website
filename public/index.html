@@ -19,6 +19,16 @@
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
+
+<script>
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+</script> 
 	
     <link href='http://fonts.googleapis.com/css?family=Exo:400,800|PT+Serif:400|consolata' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/resets.css" type="text/css" media="screen" />
@@ -56,21 +66,21 @@
 <div class="inner">
             
             <ul class="social topright">
-				<li class="instagram"><a href="http://www.instagram.com/panamericano" target="_blank">Instagram</a></li>
-                <li class="vine"><a href="http://www.vine.co/panamericano" target="_blank">Vine</a></li>
-                <li class="snapchat"><a href="snapchat://?u=Pan_Americano">Pan-Americano Snapchat</a></li>
-                <li class="twitter"><a href="http://www.twitter.com/panamerican_" target="_blank">Twitter</a></li>
-                <li class="youtube"><a href="http://www.youtube.com/subscription_center?add_user=donjeda" target="_blank">YouTube</a></li>
+				<li class="instagram"><a href="http://www.instagram.com/panamericano" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Follow', 'Instagram']);">Instagram</a></li>
+                <li class="vine"><a href="http://www.vine.co/panamericano" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Follow', 'Vine']);">Vine</a></li>
+                <li class="snapchat"><a href="http://www.snapchat.com/add/Pan_Americano" onclick="_gaq.push(['_trackEvent', 'Social', 'Follow', 'Snapchat']);">Snapchat</a></li>
+                <li class="twitter"><a href="http://twitter.com/intent/user?screen_name=panamerican_" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Follow', 'Twitter']);">Twitter</a></li>
+                <li class="youtube"><a href="http://www.youtube.com/subscription_center?add_user=donjeda" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Follow', 'YouTube']);">YouTube</a></li>
 			</ul>
     
-    <div class="spec" id="player">
+    <div class="spec" id="player" onclick="_gaq.push(['_trackEvent', 'Video', 'Avatar Hidden', 'Trailer Played']);">
         <img src="assets/img/PanAmericano.png" height="300" width="300" alt="Subscribe to PanAmericano" >
-    <p class="medium">PanAmericano</p>
+        <p class="medium">PanAmericano</p>
         <p class="small">Jonathan Guzman</p>
     </div> 
 
-    <div class="calltoaction">
-        <a>subscribe</a>
+    <div class="calltoaction" onclick="_gaq.push(['_trackEvent', 'Subscribe', 'Field Opened']);">
+        <a href="http://www.snapchat.com/add/Pan_Americano" >follow</a>
         <p class="top">Aventuras via las Américas</p>
         <p class="bottom">Adventures via the Americas</p>
     </div>
