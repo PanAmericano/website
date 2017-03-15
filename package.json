@@ -1,0 +1,25 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "^4.1.2",
+    "firebase-functions": "^0.5"
+  },
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanAmericano/website.git"
+  },
+  "author": "Jonathan Guzman <jguzmarketing@gmail.com> (http://jguzmarketing.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PanAmericano/website/issues"
+  },
+  "homepage": "https://github.com/PanAmericano/website#readme"
+}

@@ -1,0 +1,187 @@
+/************************************************************************************
+smaller than 1059px
+*************************************************************************************/
+@media screen and (max-width: 1059px) {
+
+	nav[role="navigation"] ul {width:100%}
+	.portfolio {margin:0 auto 0 -12px;text-align:left}
+	.portfolio li {margin:0 12px 24px 12px}
+	.inner {padding:0 10px;width:100%}
+
+}
+
+/************************************************************************************
+smaller than 975px
+*************************************************************************************/
+@media screen and (max-width: 975px) {
+
+	header.box .inner
+		{width:100%;padding-left:0;padding-right:0}
+
+	header.box .text
+		{border-radius:0}
+
+	.tweets .tweet_list,
+	.separator .message
+		{width:100%}
+
+	.separator
+		{padding:30px 20px}
+
+	.separator.tweets
+		{height:170px}
+
+	.popup article
+		{width:100%;padding:0 100px}
+
+	#services,
+	#about,
+	#work
+		{padding-top:60px}
+
+	header.screen  {padding-left:20px;padding-bottom:70px}
+	header .social.topright {left:10px}
+
+	header.maxi,
+	header.maxi:before
+		{min-height:auto !important}
+
+}
+
+/************************************************************************************
+smaller than 800px
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+
+	header .inner {padding-top:40px}
+
+	.smallfeatures li {width:50%}
+	.bigfeatures li {width:50%}
+
+	.type .col3 {
+		-moz-column-count: 1;
+		-moz-column-gap: 20px;
+		-o-column-count: 1;
+		-o-column-gap: 20px;
+		-webkit-column-count: 1;
+		-webkit-column-gap: 20px;
+		column-count: 1;
+		column-gap: 20px;
+	}
+	.type .col3 p {margin-top:10px}
+
+	#services .popup article,
+	#about .popup article {width:100% !important;padding:20px !important}
+
+	#about .popup article ul,
+	#about .popup article p,
+	#about .popup article img {
+		width:100%;
+		display:block;
+		margin-bottom:20px;
+	}
+
+
+	#services .popup article ul,
+	#services .popup article p,
+	#services .popup article img {
+		width:100%;
+		display:block;
+		margin-bottom:20px;
+	}
+
+	.separator.tweets {height:auto !important}
+	.tweets .tweet_list .tweet {border:none !important;text-align:left;}
+	.tweets .follow {display:none !important}
+	.tweets {width:100%}
+
+	.responsiveTable {white-space: nowrap;overflow-y: auto}
+
+
+	.infoBox img,
+	 #contact .dialog:after {display:none}
+	.dialog {width:320px !important; position:relative !important;top:-150px !important; right:-300px !important}
+	.col {display:block;width:100% !important;min-height:100px !important}
+
+	.media {margin-top:20px}
+	.col.media a {margin-left:0}
+	.dialog form {margin-top:20px}
+
+	#contact {height:900px;}
+
+}
+
+
+/************************************************************************************
+smaller than 640px
+*************************************************************************************/
+@media screen and (max-width: 640px) {
+
+	.popup.projects article
+		{padding:10px 20px}
+
+	.popup.projects article img {width:100%;height:auto;padding:10px 0}
+
+	#home .social {margin-bottom:20px}
+	header .inner {padding-top:35px}
+
+	.smallfeatures li {width:100%}
+	.bigfeatures li {width:100%}
+
+	.pricingtable .plan {width:50%}
+	.pricingtable .popular h3 {margin-top:-20px;padding:20px;border-radius:0}
+	.pricingtable .popular {padding:20px;top:0;margin-bottom:0}
+
+	.table {margin-top:30px}
+
+}
+
+
+/************************************************************************************
+smaller than 500px
+*************************************************************************************/
+@media screen and (max-width: 500px) {
+
+	nav[role="navigation"] li a {font-size:12px;padding:10px 0}
+	header .inner {padding-top:0}
+	header .spec p.large {margin-top:0;padding-top:20px;font-size:50px}
+	header .spec p.medium {font-size:25px;line-height:30px}
+	header.mini {min-height:300px}
+	header.screen .text {padding-top:50px;line-height:50px}
+	header.screen .text p {font-size:40px;margin:0}
+
+	.inner h2 {font-size:38px !important}
+
+	#about img.photo {
+		width:100%;
+		height:auto;
+		padding:0 0 15px 0;
+	}
+
+	.skillset {
+		display:block;
+		float:none;
+		padding:0 0 15px 0;
+		width:100%;
+	}
+
+	.pricingtable .plan {width:100%}
+
+	.tweets p {font-size:14px;line-height:18px}
+
+}
+
+
+/************************************************************************************
+smaller than 250px
+*************************************************************************************/
+@media screen and (max-width:250px) {
+
+	header .spec p.medium,
+	header .spec p.large
+		{font-size:25px}
+
+	.team li {width:100%}
+	.team li img {width:100%;height:auto}
+
+}

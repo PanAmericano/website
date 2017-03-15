@@ -1,8 +1,8 @@
 {
   "database": {
-    "rules": "read"
+    "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "Y"
+    "public": "public"
   }
 }
