@@ -108,7 +108,7 @@ header {
 .calltoaction a {
 	display: block;
 	height: 50px;
-	width: 240px;
+	width: 250px;
 	border-radius:7px;
 	cursor:pointer;
 	font-size: 24px;
@@ -134,7 +134,7 @@ header {
 	background: rgba(0,0,0,0.4);
 	display: block;
 	height: 40px;
-	width: 220px;
+	width: 230px;
 	margin: -50px 0 0 10px;
 	border-radius:5px;
 	text-align: center;
