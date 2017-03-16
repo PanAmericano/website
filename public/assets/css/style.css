@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfont.eot?v=4.1.0');
-  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url('../font/fontawesome-webfont.eot?v=4.6.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=4.6.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +20,7 @@
 html, body {
 	height:100%;
 	font-family:'FontAwesome','Icon','PT Serif', Verdana, sans-serif;
-    
+
 }
 
 /* styling of selected/highlighted text */
@@ -36,14 +36,13 @@ header {
 	display:block;
 	width:100%;
 	background:url('../img/trianglify-bg.png');
-	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+	-webkit-background-size: auto; -moz-background-size: auto; -o-background-size: auto; background-size: auto;
 	-moz-box-shadow: inset 0 0 250px #000000; -webkit-box-shadow: inset 0 0 250px #000000; box-shadow: inset 0 0 250px #000000;
 }
 
 	header.maxi,
 	header.maxi:before {
 		min-height:100%;
-		margin-bottom:-34px;
 	}
 
 	header.mini,
@@ -109,7 +108,7 @@ header {
 .calltoaction a {
 	display: block;
 	height: 50px;
-	width: 200px;
+	width: 240px;
 	border-radius:7px;
 	cursor:pointer;
 	font-size: 24px;
@@ -135,7 +134,7 @@ header {
 	background: rgba(0,0,0,0.4);
 	display: block;
 	height: 40px;
-	width: 180px;
+	width: 220px;
 	margin: -50px 0 0 10px;
 	border-radius:5px;
 	text-align: center;
@@ -571,7 +570,7 @@ th:after {
 .social .tumbler a:before { content:'\F311' }
 .social li.tumbler a:hover {background: #2B4964}
 
-.social .youtube a:before { content:'\F313' }
+.social .youtube a:before { content:'\f16a' }
 .social li.youtube a:hover {background: #FF3333}
 
 .social .flickr a:before { content:'\e800' }
@@ -595,7 +594,7 @@ th:after {
 .social .vine a:before { content:'\f1ca' }
 .social li.vine a:hover {background: #00bf8f}
 
-.social .snapchat a:before { content:'\f1d0' }
+.social .snapchat a:before { content:'\f2ac' }
 .social li.snapchat a:hover {background: #fffc00}
 
 /* Syntax highlighting */
