@@ -1,3 +1,4 @@
+$(document).ready(function() {
   function toggleSignIn() {
     if (firebase.auth().currentUser) {
       // [START signout]
@@ -151,3 +152,4 @@
   window.onload = function() {
     initApp();
   };
+});
