@@ -11,7 +11,7 @@ $(document).ready(function() {
         alert('Please enter an email address.');
         return;
       }
-      if (password.length < 4) {
+      if (password.length < 8) {
         alert('Please enter a password.');
         return;
       }
@@ -45,7 +45,7 @@ $(document).ready(function() {
       alert('Please enter an email address.');
       return;
     }
-    if (password.length < 4) {
+    if (password.length < 8) {
       alert('Please enter a password.');
       return;
     }
@@ -65,6 +65,9 @@ $(document).ready(function() {
       // [END_EXCLUDE]
     });
     // [END createwithemail]
+    firebase.auth().onAuthStateChanged(function(user) {
+      user.sendEmailVerification();
+    });
   }
   /**
    * Sends an email verification to the user.
