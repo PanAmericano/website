@@ -8,14 +8,18 @@ $(document).ready(function() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
-        alert('Please enter an email address.');
+        alert('Please enter a valid email address.');
         return;
       }
       if (password.length < 8) {
-        alert('Please enter a password.');
+        alert('Please enter your 8-character password.');
         return;
       }
       // Sign in with email and pass.
+      firebase.auth().onAuthStateChanged(user => {
+        if(user) {
+          window.location = 'index.html'; //After successful login, user will be redirected to home.html
+        }
       // [START authwithemail]
       firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
@@ -30,6 +34,8 @@ $(document).ready(function() {
         console.log(error);
         document.getElementById('quickstart-sign-in').disabled = false;
         // [END_EXCLUDE]
+  });
+
       });
       // [END authwithemail]
     }
@@ -46,7 +52,7 @@ $(document).ready(function() {
       return;
     }
     if (password.length < 8) {
-      alert('Please enter a password.');
+      alert('Password lenght must be a minimum of 8-characters.');
       return;
     }
     // Sign in with email and pass.
@@ -66,7 +72,11 @@ $(document).ready(function() {
     });
     // [END createwithemail]
     firebase.auth().onAuthStateChanged(function(user) {
-      user.sendEmailVerification();
+      user.sendEmailVerification().then(function() {
+        alert('Email verifcation has been sent, please check your inbox. Thank you!');
+      }, function(error) {
+        alert('An error happened. Please contact us!');
+      });
     });
   }
   /**
@@ -76,9 +86,7 @@ $(document).ready(function() {
     // [START sendemailverification]
     firebase.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
-      // [START_EXCLUDE]
       alert('Email Verification Sent!');
-      // [END_EXCLUDE]
     });
     // [END sendemailverification]
   }
