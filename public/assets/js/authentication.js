@@ -17,24 +17,26 @@ $(document).ready(function() {
       }
       // Sign in with email and pass.
       firebase.auth().onAuthStateChanged(user => {
-        if(user) {
+        if (user) {
           window.location = 'index.html'; //After successful login, user will be redirected to home.html
         }
-      // [START authwithemail]
-      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode === 'auth/wrong-password') {
-          alert('Wrong password.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-        document.getElementById('quickstart-sign-in').disabled = false;
-        // [END_EXCLUDE]
-  });
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(
+          function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // [START_EXCLUDE]
+            if (errorCode === 'auth/wrong-password') {
+              alert('Wrong password.');
+            } else {
+              alert(errorMessage);
+            }
+            console.log(error);
+            document.getElementById('quickstart-sign-in').disabled =
+              false;
+            // [END_EXCLUDE]
+          });
 
       });
       // [END authwithemail]
@@ -57,23 +59,26 @@ $(document).ready(function() {
     }
     // Sign in with email and pass.
     // [START createwithemail]
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // [START_EXCLUDE]
-      if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
-      } else {
-        alert(errorMessage);
-      }
-      console.log(error);
-      // [END_EXCLUDE]
-    });
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(
+      function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
     // [END createwithemail]
     firebase.auth().onAuthStateChanged(function(user) {
       user.sendEmailVerification().then(function() {
-        alert('Email verifcation has been sent, please check your inbox. Thank you!');
+        alert(
+          'Email verifcation has been sent, please check your inbox. Thank you!'
+        );
       }, function(error) {
         alert('An error happened. Please contact us!');
       });
@@ -90,6 +95,7 @@ $(document).ready(function() {
     });
     // [END sendemailverification]
   }
+
   function sendPasswordReset() {
     var email = document.getElementById('email').value;
     // [START sendpasswordemail]
@@ -123,7 +129,8 @@ $(document).ready(function() {
     // [START authstatelistener]
     firebase.auth().onAuthStateChanged(function(user) {
       // [START_EXCLUDE silent]
-      document.getElementById('quickstart-verify-email').disabled = true;
+      document.getElementById('quickstart-verify-email').disabled =
+        true;
       // [END_EXCLUDE]
       if (user) {
         // User is signed in.
@@ -135,19 +142,26 @@ $(document).ready(function() {
         var uid = user.uid;
         var providerData = user.providerData;
         // [START_EXCLUDE]
-        document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-        document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-        document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+        document.getElementById('quickstart-sign-in-status').textContent =
+          'Signed in';
+        document.getElementById('quickstart-sign-in').textContent =
+          'Sign out';
+        document.getElementById('quickstart-account-details').textContent =
+          JSON.stringify(user, null, '  ');
         if (!emailVerified) {
-          document.getElementById('quickstart-verify-email').disabled = false;
+          document.getElementById('quickstart-verify-email').disabled =
+            false;
         }
         // [END_EXCLUDE]
       } else {
         // User is signed out.
         // [START_EXCLUDE]
-        document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-        document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-        document.getElementById('quickstart-account-details').textContent = 'null';
+        document.getElementById('quickstart-sign-in-status').textContent =
+          'Signed out';
+        document.getElementById('quickstart-sign-in').textContent =
+          'Sign in';
+        document.getElementById('quickstart-account-details').textContent =
+          'null';
         // [END_EXCLUDE]
       }
       // [START_EXCLUDE silent]
@@ -155,10 +169,14 @@ $(document).ready(function() {
       // [END_EXCLUDE]
     });
     // [END authstatelistener]
-    document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-    document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-    document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-    document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
+    document.getElementById('quickstart-sign-in').addEventListener('click',
+      toggleSignIn, false);
+    document.getElementById('quickstart-sign-up').addEventListener('click',
+      handleSignUp, false);
+    document.getElementById('quickstart-verify-email').addEventListener(
+      'click', sendEmailVerification, false);
+    document.getElementById('quickstart-password-reset').addEventListener(
+      'click', sendPasswordReset, false);
   }
   window.onload = function() {
     initApp();

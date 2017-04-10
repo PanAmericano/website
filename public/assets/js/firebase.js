@@ -5,6 +5,3 @@ var config = {
   storageBucket: "gs://panamericano-5ac9a.appspot.com/"
 };
 firebase.initializeApp(config);
-
-// Get a reference to the database service
-var database = firebase.database();
