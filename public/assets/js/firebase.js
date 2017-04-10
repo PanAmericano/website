@@ -5,3 +5,10 @@ var config = {
   storageBucket: "gs://panamericano-5ac9a.appspot.com/"
 };
 firebase.initializeApp(config);
+// Login Variables
+var user = firebase.auth().currentUser;
+if (user) {
+  window.location = '/';
+} else {
+  // No user is signed in.
+}
