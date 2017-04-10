@@ -18,7 +18,7 @@ $(document).ready(function() {
       // Sign in with email and pass.
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
-          window.location = 'index.html'; //After successful login, user will be redirected to home.html
+          window.location = '/'; //After successful login, user will be redirected to home.html
         }
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).catch(
