@@ -8,7 +8,7 @@ firebase.initializeApp(config);
 // Login Variables
 var user = firebase.auth().currentUser;
 if (user) {
-  window.location = '/';
+  window.location.href = '/';
 } else {
   // No user is signed in.
 }
