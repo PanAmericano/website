@@ -1,0 +1,48 @@
+{
+  // Subscribed members are easily accessible
+  // and stored by ID
+  "member": {
+    // we'll talk about indices like this below
+    "user": {
+      "first_name": "Jon",
+      "last_name": "Smith",
+      "company_name": "Smithworks LLC",
+      "industry": "welding",
+      "url_website": "https://www.smithwork.com/",
+      "plan": "gold",
+      "id": 101
+    },
+  },
+
+  // Form contains only submitted info about each transaction
+  // stored under the submissions unique ID
+  "bookkeeping": {
+    "form": {
+      "transaction_date": "3/31/2017",
+      "transaction_name": "The Secret Cookie Service LLC",
+      "transaction_amount": "135.20",
+      "transaction_type": "income",
+      "transaction_method": "accrual",
+      "transaction_comments": "Saturday morning creative meetup",
+      "transaction_file_url": "https://aws.controllars.io/data/documents/101/1459361875666",
+      "id": 1459361875666,
+      "member_id": 101
+    },
+    "two": { ... },
+    "three": { ... }
+  },
+
+  // Transaction meta is separate from form data we may want to iterate quickly
+  // but still easily paginated and queried, and organized by submission
+  // transaction form ID - used for machine learning
+  "submissions": {
+    "meta": {
+        "Transaction_type": "income",
+        "": "",
+        "id": 1459361875666,
+        "member_id": 101
+      },
+    "m2": { ... },
+    "m3": { ... }
+    },
+}
